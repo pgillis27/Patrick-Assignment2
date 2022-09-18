@@ -10,7 +10,6 @@ public class Assignment2Application {
 		Random rand = new Random();
 
 		int randomNumber = rand.nextInt(100) + 1;
-		System.out.println(randomNumber);
 		int attempts = 0;
 		while (attempts < 5) {
 			System.out.println("Enter your guess between 1-100");
@@ -30,9 +29,9 @@ public class Assignment2Application {
 			} else {
 				System.out.println("You Win!!");
 			}
-			
+
 		}
 		System.out.println("You lose, the number to guess was: " + randomNumber);
-		
+
 	}
 }
