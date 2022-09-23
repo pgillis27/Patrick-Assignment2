@@ -18,7 +18,7 @@ public class Assignment2Application {
 
 			int playerGuess = userGuess.nextInt();
 
-			if (playerGuess > 100 || playerGuess < 0) {
+			if (playerGuess > 100 || playerGuess <= 0) {
 				System.out.println("Your guess is not between 1 and 100, please try again");
 			} else if (randomNumber > playerGuess) {
 				System.out.println("Your guess is too low, please try again");
@@ -28,6 +28,7 @@ public class Assignment2Application {
 				attempts++;
 			} else {
 				System.out.println("You Win!!");
+				break;
 			}
 
 		}
