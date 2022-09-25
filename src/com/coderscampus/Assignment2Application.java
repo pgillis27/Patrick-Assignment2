@@ -9,7 +9,6 @@ public class Assignment2Application {
 
 		Random rand = new Random();
 		int randomNumber = rand.nextInt(100) + 1;
-		System.out.println(randomNumber);
 		int attempts = 0;
 		Scanner userGuess = new Scanner(System.in);
 		System.out.println("Enter your guess between 1-100");
