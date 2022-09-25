@@ -8,31 +8,35 @@ public class Assignment2Application {
 	public static void main(String[] args) {
 
 		Random rand = new Random();
-
 		int randomNumber = rand.nextInt(100) + 1;
+		System.out.println(randomNumber);
 		int attempts = 0;
-		while (attempts < 5) {
-			System.out.println("Enter your guess between 1-100");
+		Scanner userGuess = new Scanner(System.in);
+		System.out.println("Enter your guess between 1-100");
 
-			Scanner userGuess = new Scanner(System.in);
+		while (attempts < 5) {
 
 			int playerGuess = userGuess.nextInt();
 
 			if (playerGuess > 100 || playerGuess <= 0) {
 				System.out.println("Your guess is not between 1 and 100, please try again");
 			} else if (randomNumber > playerGuess) {
-				System.out.println("Your guess is too low, please try again");
 				attempts++;
+				System.out.println("Please pick a higher number");
 			} else if (randomNumber < playerGuess) {
-				System.out.println("Your guess is too high, please try again");
 				attempts++;
+				System.out.println("Please pick a lower number");
 			} else {
-				System.out.println("You Win!!");
 				break;
 			}
 
 		}
-		System.out.println("You lose, the number to guess was: " + randomNumber);
+		if (attempts < 5) {
+			System.out.println("You Win!");
+		} else {
+			System.out.println("You lose!");
+			System.out.println("The number to guess was: " + randomNumber);
+		}
 
 	}
 }
